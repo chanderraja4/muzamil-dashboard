@@ -14,14 +14,15 @@ function App() {
     <>
       <div class="flex">
         <div class="flex-1 w-80 ... bg-slate-50">
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Home />}>
-                <Route path='/login' element={<Login />} />
-
-              </Route>
-            </Routes>
-          </BrowserRouter>
+        <Router>
+        <Navbar title="LOGO" />
+        <Switch>
+          <Route path='/login' component={Login} />
+          <Route path='/dummy' component={Dummy} />
+          <Route path='/' component={Home} />
+        </Switch>
+        <Footer/>
+      </Router>
         </div>
       </div>
 
